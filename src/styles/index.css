@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* This ensures the slate palette is explicitly available */
+  --color-slate-50: #f8fafc;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-900: #0f172a;
+  
+  /* Adding your custom institutional colors back */
+  --color-institutional-blue: #003366;
+  --color-institutional-navy: #001A33;
+  --color-institutional-gold: #FFB800;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-900);
+    @apply antialiased;
+  }
+}
+
+/* Ensure the fixed header doesn't hide your content */
+main {
+  padding-top: 140px; 
+}
